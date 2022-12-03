@@ -1,0 +1,23 @@
+server:
+  port: 9295
+
+spring:
+  application:
+    name: HYSTRIX-DASHBOARD
+
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
+
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: eureka-0
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    servceUrl:
+      defaultZone: http://eureka-0.eureka.micro-service.default.svc.cluster.local:8761/eureka
+
+
